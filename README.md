@@ -67,3 +67,24 @@ name LIKE '%man';
 3	Gary Oldman
 
    ```
+  ###   <h3 align="left">:heavy_check_mark: В какие города летал Bruce Willis </h3>  
+  
+   ```SQL
+SELECT 
+town_to
+FROM 
+Trip
+JOIN Pass_in_trip ON Trip.id = Pass_in_trip.trip
+JOIN Passenger ON Pass_in_trip.passenger = Passenger.id 
+WHERE 
+name = 'Bruce Willis';
+
+ ```
+   ###  <h2 align="left">Результат</h2>
+  ```
+  town_to
+1	Paris
+2	Vladivostok
+3	Moscow
+
+  ```
